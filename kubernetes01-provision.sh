@@ -8,7 +8,7 @@ apt-get install -y kubeadm=1.14.1-00 kubelet=1.14.1-00 kubectl=1.14.1-00
 wget https://tinyurl.com/yb4xturm -O rbac-kdd.yaml
 wget https://tinyurl.com/y8lvqc9g -O calico.yaml
 
-kubeadm init --kubernetes-version 1.14.1 --pod-network-cidr 192.168.0.0/16 --apiserver-advertise-address 192.168.100.10| tee kubeadm-init.out
+kubeadm init --kubernetes-version 1.14.1 --pod-network-cidr 192.168.0.0/16 --apiserver-advertise-address 192.168.100.10 | tee kubeadm-init.out
 
 # kubectl config
 mkdir -p $HOME/.kube
@@ -20,5 +20,9 @@ kubectl cluster-info
 kubectl apply -f rbac-kdd.yaml
 kubectl apply -f calico.yaml
 
- echo "source <(kubectl completion bash)" >> ~/.bashrc
+#kubectl bash_completion
+kubectl completion bash > /etc/bash_completion.d/kubectl
+echo "source /etc/bash_completion" >>  ~/.bashrc
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+
 
