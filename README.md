@@ -1,4 +1,4 @@
-3 node kubernetes cluster for **CKA course LAB 3.X**
+**3 nodes kubernetes cluster for CKA course LAB 3.X**
 ```
 #master
 kubeadm token create
