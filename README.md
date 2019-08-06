@@ -1,4 +1,13 @@
 **3 nodes kubernetes cluster for CKA course LAB 3.X**
+
+To start:
+```bash
+git clone https://github.com/stereopanda/kubernetes-vagrant.git
+cd kubernetes-vagrant 
+vagrant up
+
+```
+
 ```
 #master
 kubeadm token create
