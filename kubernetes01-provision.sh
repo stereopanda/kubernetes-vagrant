@@ -15,6 +15,10 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
+echo 'Environment="KUBELET_EXTRA_ARGS=--node-ip=192.168.100.10"' >> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+systemctl daemon-reload
+systemctl restart kubelet
+
 kubectl cluster-info
 
 kubectl apply -f rbac-kdd.yaml
