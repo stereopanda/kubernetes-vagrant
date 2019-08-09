@@ -29,4 +29,7 @@ kubectl completion bash > /etc/bash_completion.d/kubectl
 echo "source /etc/bash_completion" >>  ~/.bashrc
 echo "source <(kubectl completion bash)" >> ~/.bashrc
 
+echo "Join command:"
+kubeadm token create --print-join-command
+
 
