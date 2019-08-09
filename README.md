@@ -1,5 +1,7 @@
 **3 nodes kubernetes cluster for CKA course LAB 3.X**
 
+Kubernetes version = 1.14.1  
+
 To start:
 ```bash
 git clone https://github.com/stereopanda/kubernetes-vagrant.git
