@@ -15,14 +15,14 @@ servers=[
         :cpu => 1,
         :provision_shell => "kubernetes02-provision.sh"
       },
-      {
-        :hostname => "kubernetes03",
-        :ip => "192.168.100.12",
-        :box => "ubuntu/bionic64",
-        :ram => 2048,
-        :cpu => 1,
-        :provision_shell => "kubernetes03-provision.sh"
-      }
+#      {
+#        :hostname => "kubernetes03",
+#        :ip => "192.168.100.12",
+#        :box => "ubuntu/bionic64",
+#        :ram => 2048,
+#        :cpu => 1,
+#        :provision_shell => "kubernetes03-provision.sh"
+#      }
 
     ]
 
